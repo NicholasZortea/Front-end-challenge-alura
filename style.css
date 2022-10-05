@@ -213,7 +213,41 @@ footer > .sobreNos > p {
     box-shadow: 0 2px 2px rgba(0,0,0,0.2);
     margin: 1rem 1rem;
     padding: .5rem .5rem;
+    text-decoration: none;
 }
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
+
+.btnEnviaFormulario {
+    font-weight: 600;
+    font-size: 14px;
+    background-color: var(--azul-padrao);
+    color: #FFF;
+    border: none;
+    padding: 1rem 1rem;
+    margin: .5rem 0 1rem 1rem;
+}
+
+.desenvolvidoPor {
+    background-color: #FFF;
+    width: 100%;
+}
+
+.desenvolvidoPor > p {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.desenvolvidoPor > p {
+    padding: 2rem 4rem 2rem 4rem;
+}
+
 
 /*media querry tablet*/
 @media screen and (min-width: 768px){
