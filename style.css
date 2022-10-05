@@ -8,10 +8,16 @@ html {
     font-family: 'Raleway', sans-serif;
 }
 
-
-.cabecalhoLadoEsquerdo {
+/*Displays que devem ser escondidos na versão mobile*/
+.cabecalhoTablet {
     display: none;
 }
+
+.faleConosco > h1 {
+    display: none;
+}
+
+/*Dim dos Displays que devem ser escondidos na versão mobile*/
 
 .divMobile {
     display: flex;
@@ -25,7 +31,7 @@ html {
     height: 28px;
 }
 
-.divMobile > p {
+.divMobile > a {
     border: 1px solid var(--azul-padrao);
     font-size: 14px;
     font-weight: 600;
@@ -251,8 +257,20 @@ textarea:focus, input:focus, select:focus {
 
 /*media querry tablet*/
 @media screen and (min-width: 768px){
+
+    /*Esconder a div da versão mobile*/
     .divMobile {
         display: none;
+    }
+    /*Fim do Esconder a div da versão mobile*/
+
+
+    /*Cabeçalho*/
+    .cabecalhoTablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 2rem;
     }
     .cabecalhoLadoEsquerdo {
         display: flex;
@@ -261,6 +279,18 @@ textarea:focus, input:focus, select:focus {
         justify-content: space-between;
         padding: 0 .5rem 0 .5rem;
         margin: .5rem 0 .5rem 0;
+    }
+
+    .cabecalhoLadoEsquerdo > img {
+        margin: 0 2rem 0 0;
+    }
+
+    .Login > a {
+        border: 1px solid var(--azul-padrao);
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--azul-padrao);
+        padding: 0.5rem 2rem 0.5rem 2rem;
     }
 
     .LogoTablet {
@@ -284,7 +314,54 @@ textarea:focus, input:focus, select:focus {
         border-style: none;
         align-items: center;
         flex-grow: 1;
+        justify-content: space-between;
     }
+    textarea:focus, input:focus, select:focus {
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+    } 
+
+    /*Fim do Cabeçalho*/
+
+    /*Banner*/
+    .bannerTexto > h1 {
+        font-size: 52px;
+    }
+
+    .bannerTexto > p {
+        font-size: 22px;
+    }
+    /*Fim do Banner*/
+    
+
+    /*Rodapé*/
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sobreNos{
+        width: 50%;
+    }
+    .faleConosco{
+        width: 50%;
+    }
+
+    .faleConosco > h1 {
+        display: inherit;
+        font-weight: 700;
+        font-size: 16px;
+        margin: 1rem 0 0 1rem;
+    }
+
+    .formNome{
+        margin: .5rem 1rem 0 1rem
+    }
+
+    /*Dim do Rodapé*/
+    
+    
 
 
 }
